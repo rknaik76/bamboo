@@ -1,12 +1,19 @@
 version: 2
 plan:
-  key: MYPROJ-CREAM
-  name: My First YAML Plan
-project:
-  key: CREAM
+  project-key: DEMO
+  key: HELLO
+  name: Hello World Plan
+
 stages:
-  - Stage 1:
+  - Build:
       jobs:
-        - Job 1:
-            tasks:
-            - script: echo "Hello from Bamboo!"
+        - HelloJob
+
+jobs:
+  - HelloJob:
+      key: JOB1
+      tasks:
+        - script:
+            interpreter: BINSH_OR_CMDEXE
+            scripts:
+              - echo "Hello World from Bamboo!"
