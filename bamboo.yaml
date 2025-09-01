@@ -1,0 +1,12 @@
+version: 2
+plan:
+  key: MYPROJ-CREAM
+  name: My First YAML Plan
+project:
+  key: CREAM
+stages:
+  - Stage 1:
+      jobs:
+        - Job 1:
+            tasks:
+            - script: echo "Hello from Bamboo!"
